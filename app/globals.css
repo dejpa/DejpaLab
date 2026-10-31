@@ -3,17 +3,47 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Iranian Sans';
-  src: url('/font/Iranian Sans.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'IRANSans';
+  src: url('/font/iransans/IRANSansWeb_UltraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANSans';
+  src: url('/font/iransans/IRANSansWeb_Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANSans';
+  src: url('/font/iransans/IRANSansWeb.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANSans';
+  src: url('/font/iransans/IRANSansWeb_Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANSans';
+  src: url('/font/iransans/IRANSansWeb_Bold.woff') format('woff');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 :root {
-  --font-inter: 'Inter', system-ui, sans-serif;
-  --font-iranian-sans: 'Iranian Sans', 'Tahoma', 'Arial', sans-serif;
-  --font-vazir: var(--font-iranian-sans);
+  --font-iransans: 'IRANSans', 'Tahoma', 'Arial', sans-serif;
 }
 
 * {
@@ -28,14 +58,13 @@ html {
 }
 
 body {
-  font-family: var(--font-inter);
+  font-family: var(--font-iransans);
   direction: ltr;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 [dir='rtl'] body {
-  font-family: var(--font-vazir);
   direction: rtl;
 }
 

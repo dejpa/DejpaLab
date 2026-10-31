@@ -37,8 +37,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        farsi: ['var(--font-iranian-sans)', 'Tahoma', 'Arial', 'sans-serif'],
+        sans: ['var(--font-iransans)'],
+        farsi: ['var(--font-iransans)'],
       },
     },
   },

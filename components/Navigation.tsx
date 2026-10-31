@@ -31,6 +31,7 @@ export default function Navigation() {
     { href: '/request-test', label: t('requestTest') },
     { href: '/results', label: t('results') },
     { href: '/about', label: t('about') },
+    { href: '/honors', label: t('honors') },
     { href: '/contact', label: t('contact') },
   ];
 

@@ -9,7 +9,8 @@
     "searchPlaceholder": "Search...",
     "adminLogin": "Admin Login",
     "adminPanel": "Admin Panel",
-    "logout": "Logout"
+    "logout": "Logout",
+    "honors": "Honors"
   },
   "home": {
     "title": "Dejpa Laboratory",
@@ -416,5 +417,69 @@
     "requestDetails": "Request Details",
     "requestDate": "Request Date",
     "lastUpdate": "Last Update"
+  },
+  "honors": {
+    "title": "Honors & Certificates",
+    "subtitle": "Laboratory credentials and Dejpa’s technical and technology recognitions",
+    "labTitle": "Laboratory credentials",
+    "companyTitle": "Dejpa company honors",
+    "companyNote": "These recognitions relate to Dejpa Oil & Bitumen Refining Company and its products.",
+    "otherTitle": "Other company certificates and recognitions",
+    "viewDocument": "View original document",
+    "sourceLabel": "View the document archive on Dejpa’s website",
+    "items": {
+      "iso17025": {
+        "title": "International laboratory accreditation",
+        "description": "Laboratory accreditation based on ISO/IEC 17025; the 1404 SH (2025/26) certificate is available in Dejpa’s archive."
+      },
+      "partnerLab": {
+        "title": "Grade 1 standard partner laboratory",
+        "description": "Holder of a standard partner laboratory certificate and Grade 1 partner laboratory recognition."
+      },
+      "knowledgeBased": {
+        "title": "Knowledge-based company recognition",
+        "description": "Dejpa is recognized as a knowledge-based company in advanced materials and products based on chemical technologies."
+      },
+      "nationalStandard": {
+        "title": "National exemplary standard unit — 1405 SH",
+        "description": "Dejpa Oil & Bitumen Refining Company was selected as a national exemplary standard unit in 1405 SH (2026/27)."
+      },
+      "technicalGrade": {
+        "title": "A+ technical certificate",
+        "description": "Issued by the Road, Housing and Urban Development Research Center for PG 58-16, PG 58-22, PG 64-16, PG 64-22, PG 70-10 and PG 70-16 bitumen production."
+      },
+      "standardUnits": {
+        "title": "Previous exemplary standard unit awards",
+        "description": "Selected as an exemplary standard unit in 1397, 1399, 1401, 1402 and 1403 SH, as listed on Dejpa’s main website."
+      },
+      "technologyUnit": {
+        "title": "Technology unit approval",
+        "description": "Technology unit approval from Khuzestan Science and Technology Park."
+      },
+      "iso9001": {
+        "title": "ISO 9001",
+        "description": "Dejpa’s quality management system certificate."
+      },
+      "iso45001": {
+        "title": "ISO 45001",
+        "description": "Dejpa’s occupational health and safety management system certificate."
+      },
+      "iso14001": {
+        "title": "ISO 14001",
+        "description": "Dejpa’s environmental management system certificate."
+      },
+      "iso10002": {
+        "title": "ISO 10002",
+        "description": "Dejpa’s customer satisfaction management certificate."
+      },
+      "iso10004": {
+        "title": "ISO 10004",
+        "description": "Dejpa’s customer satisfaction monitoring certificate."
+      },
+      "iso26000": {
+        "title": "ISO 26000",
+        "description": "Dejpa’s social responsibility certificate, as listed on the main website."
+      }
+    }
   }
 }

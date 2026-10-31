@@ -57,6 +57,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/honors" className="hover:text-white transition-colors">
+                  {tNav('honors')}
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="group flex items-center hover:text-white transition-all duration-200">
                   <span className="w-0 group-hover:w-2 h-0.5 bg-white mr-0 group-hover:mr-2 transition-all duration-200"></span>
                   {tNav('contact')}
