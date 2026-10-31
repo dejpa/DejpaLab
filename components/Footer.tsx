@@ -11,7 +11,7 @@ export default function Footer() {
   const tContact = useTranslations('contact');
 
   return (
-    <footer className="bg-gradient-to-b from-primary-600 to-primary-800 text-gray-200 relative overflow-hidden">
+    <footer className="site-footer bg-gradient-to-b from-primary-600 to-primary-800 text-gray-200 relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>

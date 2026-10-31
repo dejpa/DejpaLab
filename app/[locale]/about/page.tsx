@@ -166,7 +166,7 @@ export default function AboutPage() {
       </section>
 
       {/* Main Content */}
-      <main className="py-24 bg-gradient-to-b from-gray-50 via-white to-white">
+      <main className="site-canvas py-16 md:py-20">
         <div className="container mx-auto px-4">
           {/* Description */}
           <div className="max-w-4xl mx-auto mb-20">
@@ -177,8 +177,8 @@ export default function AboutPage() {
 
           {/* Mission & Vision */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-            <div className="group bg-gradient-to-br from-primary-50 to-primary-100 p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-primary-100">
-              <div className="bg-gradient-to-br from-primary-600 to-primary-700 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary-500/30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+            <div className="group bg-gradient-to-br from-primary-50 to-primary-100 p-6 md:p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-primary-100">
+              <div className="bg-gradient-to-br from-primary-600 to-primary-700 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary-500/30 group-hover:scale-110 transition-all duration-300">
                 <Target className="w-10 h-10 text-white" />
               </div>
 
@@ -191,8 +191,8 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="group bg-gradient-to-br from-secondary-50 to-secondary-100 p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-secondary-100">
-              <div className="bg-gradient-to-br from-secondary-600 to-secondary-700 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-secondary-500/30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+            <div className="group bg-gradient-to-br from-secondary-50 to-secondary-100 p-6 md:p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-secondary-100">
+              <div className="bg-gradient-to-br from-secondary-600 to-secondary-700 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-secondary-500/30 group-hover:scale-110 transition-all duration-300">
                 <Eye className="w-10 h-10 text-white" />
               </div>
 
@@ -219,9 +219,9 @@ export default function AboutPage() {
                 return (
                   <div
                     key={index}
-                    className="group bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                    className="surface-glass group bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
                   >
-                    <div className="bg-gradient-to-br from-primary-100 to-primary-200 w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-primary-200/50 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                    <div className="bg-gradient-to-br from-primary-100 to-primary-200 w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-primary-200/50 group-hover:scale-110  transition-all duration-300">
                       <Icon className="w-10 h-10 text-primary-700 group-hover:text-primary-800 transition-colors" />
                     </div>
 
@@ -258,7 +258,7 @@ export default function AboutPage() {
               {standardUnitAwards.map((award, index) => (
                 <article
                   key={index}
-                  className="group bg-white rounded-2xl border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden hover:-translate-y-1"
+                  className="surface-glass group bg-white rounded-2xl border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden hover:-translate-y-1"
                 >
                   <div className="relative h-64 bg-gray-50 border-b border-gray-100 flex items-center justify-center p-5">
                     <Image

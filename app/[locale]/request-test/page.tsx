@@ -219,7 +219,7 @@ export default function RequestTestPage() {
   };
 
   return (
-    <div className="py-24 bg-gradient-to-b from-gray-50 to-white min-h-screen">
+    <div className="site-canvas py-14 md:py-20 min-h-screen">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
@@ -232,7 +232,7 @@ export default function RequestTestPage() {
 
         <div className="max-w-4xl mx-auto">
           {isSubmitted ? (
-            <div className="bg-white p-12 rounded-3xl shadow-xl border border-gray-100 text-center">
+            <div className="surface-glass bg-white p-6 md:p-12 rounded-3xl shadow-xl border border-gray-100 text-center">
               <div className="bg-gradient-to-br from-green-100 to-green-200 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-green-200/50">
                 <CheckCircle className="w-12 h-12 text-green-600" />
               </div>
@@ -264,7 +264,7 @@ export default function RequestTestPage() {
               </p>
             </div>
           ) : (
-            <div className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100">
+            <div className="surface-glass bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-gray-100">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="border-b border-gray-200 pb-6 mb-6">
                   <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">

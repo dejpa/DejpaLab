@@ -204,7 +204,7 @@ export default function AdminPage() {
   };
 
   return (
-    <div className="py-24 bg-gradient-to-b from-gray-50 to-white min-h-screen">
+    <div className="site-canvas py-14 md:py-20 min-h-screen">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="mb-8">
@@ -219,7 +219,7 @@ export default function AdminPage() {
         </div>
 
         {/* Tabs */}
-        <div className="bg-white p-2 rounded-2xl shadow-lg border border-gray-100 mb-8">
+        <div className="surface-glass bg-white p-2 rounded-2xl shadow-lg border border-gray-100 mb-8">
           <div className="flex gap-2">
             <button
               onClick={() => setActiveTab('overview')}
@@ -273,7 +273,7 @@ export default function AdminPage() {
           <div className="space-y-6">
             {/* Statistics Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+              <div className="surface-glass bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
                 <div className="flex items-center justify-between mb-4">
                   <div className="bg-primary-100 p-3 rounded-xl">
                     <FileText className="w-6 h-6 text-primary-700" />
@@ -284,7 +284,7 @@ export default function AdminPage() {
                 <p className="text-sm text-gray-600">{t('totalRequests')}</p>
               </div>
 
-              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+              <div className="surface-glass bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
                 <div className="flex items-center justify-between mb-4">
                   <div className="bg-gray-100 p-3 rounded-xl">
                     <XCircle className="w-6 h-6 text-gray-700" />
@@ -295,7 +295,7 @@ export default function AdminPage() {
                 <p className="text-sm text-gray-600">{t('pendingRequests')}</p>
               </div>
 
-              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+              <div className="surface-glass bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
                 <div className="flex items-center justify-between mb-4">
                   <div className="bg-yellow-100 p-3 rounded-xl">
                     <Clock className="w-6 h-6 text-yellow-700" />
@@ -306,7 +306,7 @@ export default function AdminPage() {
                 <p className="text-sm text-gray-600">{t('processingRequests')}</p>
               </div>
 
-              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+              <div className="surface-glass bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
                 <div className="flex items-center justify-between mb-4">
                   <div className="bg-green-100 p-3 rounded-xl">
                     <CheckCircle className="w-6 h-6 text-green-700" />
@@ -320,7 +320,7 @@ export default function AdminPage() {
 
             {/* Users Stats */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+              <div className="surface-glass bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
                 <div className="flex items-center justify-between mb-4">
                   <div className="bg-purple-100 p-3 rounded-xl">
                     <Users className="w-6 h-6 text-purple-700" />
@@ -330,7 +330,7 @@ export default function AdminPage() {
                 <p className="text-sm text-gray-600">{t('totalUsers')}</p>
               </div>
 
-              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+              <div className="surface-glass bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
                 <div className="flex items-center justify-between mb-4">
                   <div className="bg-indigo-100 p-3 rounded-xl">
                     <UserCircle className="w-6 h-6 text-indigo-700" />
@@ -342,7 +342,7 @@ export default function AdminPage() {
             </div>
 
             {/* Recent Requests */}
-            <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+            <div className="surface-glass bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-2xl font-bold text-gray-900">{t('recentRequests')}</h2>
                 <button
@@ -405,7 +405,7 @@ export default function AdminPage() {
             </div>
 
             {/* Filters */}
-            <div className="bg-white p-4 rounded-2xl shadow-lg border border-gray-100 mb-6">
+            <div className="surface-glass bg-white p-4 rounded-2xl shadow-lg border border-gray-100 mb-6">
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="flex-1 relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -431,7 +431,7 @@ export default function AdminPage() {
             </div>
             
             {filteredRequests.length === 0 ? (
-              <div className="bg-white p-12 rounded-3xl shadow-xl border border-gray-100 text-center">
+              <div className="surface-glass bg-white p-6 md:p-12 rounded-3xl shadow-xl border border-gray-100 text-center">
                 <FileText className="w-16 h-16 text-gray-300 mx-auto mb-4" />
                 <p className="text-gray-600 text-lg">{t('noRequests')}</p>
               </div>
@@ -440,7 +440,7 @@ export default function AdminPage() {
                 {filteredRequests.map((request) => (
                   <div
                     key={request.id}
-                    className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
+                    className="surface-glass bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
                   >
                     <div className="flex flex-col gap-4">
                       <div className="flex items-start justify-between">
@@ -542,7 +542,7 @@ export default function AdminPage() {
               <p className="text-gray-600">{t('uploadResultDescription')}</p>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
+            <div className="surface-glass bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
               <form onSubmit={async (e) => {
                 e.preventDefault();
                 if (uploadForm.selectedRequestId && uploadForm.resultFile) {
@@ -730,7 +730,7 @@ export default function AdminPage() {
               {users.map((userItem) => (
                 <div
                   key={userItem.id}
-                  className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all"
+                  className="surface-glass bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">

@@ -47,7 +47,7 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="py-24 bg-gradient-to-b from-gray-50 to-white min-h-screen">
+    <div className="site-canvas py-14 md:py-20 min-h-screen">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
@@ -64,13 +64,13 @@ export default function ServicesPage() {
             return (
               <div
                 key={index}
-                className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary-200 hover:-translate-y-2 relative overflow-hidden"
+                className="surface-glass group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary-200 hover:-translate-y-1 relative overflow-hidden"
               >
                 {/* Gradient Background on Hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-50/0 to-secondary-50/0 group-hover:from-primary-50/50 group-hover:to-secondary-50/30 transition-all duration-300"></div>
                 
                 <div className="relative z-10">
-                  <div className="bg-gradient-to-br from-primary-100 to-primary-200 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-primary-200/50">
+                  <div className="bg-gradient-to-br from-primary-100 to-primary-200 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-primary-200/50">
                     <Icon className="w-10 h-10 text-primary-700 group-hover:text-primary-800 transition-colors" />
                   </div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary-700 transition-colors">
@@ -113,12 +113,12 @@ export default function ServicesPage() {
 
             <div className="grid grid-cols-1 gap-6 mb-12">
               {/* Testing Services */}
-              <div className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary-200 hover:-translate-y-2 relative overflow-hidden">
+              <div className="surface-glass group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary-200 hover:-translate-y-1 relative overflow-hidden">
                 {/* Gradient Background on Hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-50/0 to-secondary-50/0 group-hover:from-primary-50/50 group-hover:to-secondary-50/30 transition-all duration-300"></div>
                 
                 <div className="relative z-10">
-                  <div className="bg-gradient-to-br from-primary-100 to-primary-200 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-primary-200/50">
+                  <div className="bg-gradient-to-br from-primary-100 to-primary-200 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-primary-200/50">
                     <TestTube className="w-10 h-10 text-primary-700 group-hover:text-primary-800 transition-colors" />
                   </div>
                   <h3 className="text-2xl  font-bold text-gray-900 mb-4 group-hover:text-primary-700 transition-colors">

@@ -261,7 +261,7 @@ export default function ResultsPage() {
   // If logged in, show dashboard
   if (isLoggedIn && customerSession) {
     return (
-      <div className="py-24 bg-gradient-to-b from-gray-50 to-white min-h-screen">
+      <div className="site-canvas py-14 md:py-20 min-h-screen">
         <div className="container mx-auto px-4">
           {/* Header */}
           <div className="mb-8">
@@ -282,7 +282,7 @@ export default function ResultsPage() {
             </div>
 
             {/* Customer Info Card */}
-            <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+            <div className="surface-glass bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="flex items-center gap-4">
                   <div className="bg-primary-100 p-3 rounded-xl">
@@ -320,7 +320,7 @@ export default function ResultsPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('myRequests')}</h2>
             
             {customerRequests.length === 0 ? (
-              <div className="bg-white p-12 rounded-3xl shadow-xl border border-gray-100 text-center">
+              <div className="surface-glass bg-white p-6 md:p-12 rounded-3xl shadow-xl border border-gray-100 text-center">
                 <FileText className="w-16 h-16 text-gray-300 mx-auto mb-4" />
                 <p className="text-gray-600 text-lg">{t('noRequests')}</p>
               </div>
@@ -329,7 +329,7 @@ export default function ResultsPage() {
                 {customerRequests.map((request) => (
                   <div
                     key={request.id}
-                    className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
+                    className="surface-glass bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
                   >
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                       <div className="flex-1">
@@ -430,7 +430,7 @@ export default function ResultsPage() {
 
   // Login form
   return (
-    <div className="py-24 bg-gradient-to-b from-gray-50 to-white min-h-screen">
+    <div className="site-canvas py-14 md:py-20 min-h-screen">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
@@ -443,7 +443,7 @@ export default function ResultsPage() {
 
         <div className="max-w-4xl mx-auto">
           {/* Login Method Tabs */}
-          <div className="bg-white p-2 rounded-2xl shadow-lg border border-gray-100 mb-8">
+          <div className="surface-glass bg-white p-2 rounded-2xl shadow-lg border border-gray-100 mb-8">
             <div className="flex gap-2">
               <button
                 onClick={() => {
@@ -491,7 +491,7 @@ export default function ResultsPage() {
           </div>
 
           {/* Login Form */}
-          <div className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100 mb-8">
+          <div className="surface-glass bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-gray-100 mb-8">
             <form onSubmit={handleLogin} className="space-y-6">
               {/* Tracking Code Method */}
               {loginMethod === 'tracking' && (

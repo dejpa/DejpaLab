@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations, useLocale } from 'next-intl';
+import { useState } from 'react';
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { FlaskConical, Microscope, TestTube, Shield, Award, Users, FileText, Search, ArrowRight, ArrowLeft } from 'lucide-react';
@@ -12,6 +13,7 @@ export default function HomePage() {
   const tResults = useTranslations('results');
   const locale = useLocale();
   const isRTL = locale === 'fa';
+  const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
   const Arrow = isRTL ? ArrowLeft : ArrowRight;
 
   const services = [
@@ -48,9 +50,9 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="flex flex-col">
+    <div className="site-home flex flex-col">
       {/* Hero Section */}
-      <section className="relative text-white py-24 md:py-36 min-h-[600px] md:min-h-[700px] flex items-center overflow-hidden">
+      <section className="relative text-white py-20 md:py-28 min-h-[600px] md:min-h-[700px] flex items-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -68,16 +70,20 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-t from-primary-900/40 via-transparent to-transparent z-[2]"></div>
         {/* Content */}
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl animate-fade-in-up">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance leading-tight tracking-tight">
+          <div className="hero-copy max-w-4xl animate-fade-in-up">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance leading-tight tracking-tight">
               <span className="block">{t('title')}</span>
             </h1>
             <p className="text-xl md:text-2xl mb-4 text-white/95 font-medium leading-relaxed">
               {t('subtitle')}
             </p>
-            <p className="text-lg md:text-xl mb-10 text-white/85 leading-relaxed max-w-2xl">
+            <p id="home-description" className={`text-base md:text-lg text-white/90 leading-relaxed max-w-2xl ${isDescriptionExpanded ? '' : 'line-clamp-4 md:line-clamp-none'}`}>
               {t('description')}
             </p>
+            <button type="button" aria-expanded={isDescriptionExpanded} aria-controls="home-description" onClick={() => setIsDescriptionExpanded(!isDescriptionExpanded)} className="mt-2 min-h-11 text-sm text-white underline underline-offset-4 md:hidden">
+              {isRTL ? (isDescriptionExpanded ? 'نمایش کمتر' : 'ادامه معرفی آزمایشگاه') : (isDescriptionExpanded ? 'Show less' : 'Read more about the laboratory')}
+            </button>
+            <div className="mb-6 md:mb-8" />
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/services"
@@ -101,7 +107,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
+      <section className="site-canvas py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-5 tracking-tight">
@@ -117,13 +123,13 @@ export default function HomePage() {
               return (
                 <div
                   key={index}
-                  className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary-200 hover:-translate-y-2 relative overflow-hidden"
+                  className="surface-glass group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary-200 hover:-translate-y-1 relative overflow-hidden"
                 >
                   {/* Gradient Background on Hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary-50/0 to-secondary-50/0 group-hover:from-primary-50/50 group-hover:to-secondary-50/30 transition-all duration-300"></div>
                   
                   <div className="relative z-10">
-                    <div className="bg-gradient-to-br from-primary-100 to-primary-200 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-primary-200/50">
+                    <div className="bg-gradient-to-br from-primary-100 to-primary-200 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110  transition-all duration-300 shadow-lg shadow-primary-200/50">
                       <Icon className="w-10 h-10 text-primary-700 group-hover:text-primary-800 transition-colors" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-700 transition-colors">
@@ -208,7 +214,7 @@ export default function HomePage() {
               href="/request-test"
               className="group bg-white/10 backdrop-blur-lg p-10 rounded-3xl border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
-              <div className="bg-white/20 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+              <div className="bg-white/20 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110  transition-all duration-300">
                 <FileText className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-4">{tRequest('title')}</h3>
@@ -226,7 +232,7 @@ export default function HomePage() {
               href="/results"
               className="group bg-white/10 backdrop-blur-lg p-10 rounded-3xl border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
-              <div className="bg-white/20 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+              <div className="bg-white/20 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110  transition-all duration-300">
                 <Search className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-4">{tResults('title')}</h3>

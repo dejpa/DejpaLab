@@ -28,7 +28,7 @@ export default async function HonorsPage({ params: { locale } }: Props) {
   const t = await getTranslations('honors');
 
   const renderHonor = (honor: typeof laboratoryHonors[number]) => (
-    <article key={honor.key} className="flex flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-md">
+    <article key={honor.key} className="surface-glass flex flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-md">
       <a href={`${documentsBase}${honor.document}`} target="_blank" rel="noopener noreferrer" className="group block border-b border-gray-100 bg-gray-50 p-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-600" aria-label={`${t('viewDocument')}: ${t(`items.${honor.key}.title`)}`}>
         <div className="relative h-72">
           <Image src={`/img/honors/${honor.image}.jpg`} alt={t(`items.${honor.key}.title`)} fill sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw" className="object-contain transition-transform duration-300 group-hover:scale-105" />
@@ -45,8 +45,8 @@ export default async function HonorsPage({ params: { locale } }: Props) {
   );
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-white">
-      <section className="relative isolate overflow-hidden bg-primary-900 px-4 py-20 text-center text-white md:py-28">
+    <div className="site-canvas">
+      <section className="honors-hero relative isolate overflow-hidden bg-primary-900 px-4 py-20 text-center text-white md:py-28">
         <Image src="/img/honors/dejpalab-standard-trophy-cover-v3.jpg" alt="" fill priority sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-primary-900/45" aria-hidden="true" />
         <div className="relative z-10">
@@ -69,7 +69,7 @@ export default async function HonorsPage({ params: { locale } }: Props) {
           <h2 id="other-honors" className="mb-8 text-2xl font-bold text-gray-900 md:text-3xl">{t('otherTitle')}</h2>
           <ul className="grid gap-4 md:grid-cols-2">
             {otherHonors.map(key => (
-              <li key={key} className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
+              <li key={key} className="surface-glass rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
                 <h3 className="mb-2 text-lg font-bold text-gray-900">{t(`items.${key}.title`)}</h3>
                 <p className="leading-8 text-gray-600">{t(`items.${key}.description`)}</p>
               </li>

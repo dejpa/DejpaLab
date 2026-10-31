@@ -31,7 +31,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="py-24 bg-gradient-to-b from-gray-50 to-white min-h-screen">
+    <div className="site-canvas py-14 md:py-20 min-h-screen">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
@@ -44,7 +44,7 @@ export default function ContactPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <div className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300">
+          <div className="surface-glass bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">
               {t('send')}
             </h2>
@@ -117,7 +117,7 @@ export default function ContactPage() {
 
           {/* Contact Info */}
           <div className="space-y-6">
-            <div className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300">
+            <div className="surface-glass bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300">
               <h2 className="text-3xl font-bold text-gray-900 mb-8">
                 {t('contactInfo')}
               </h2>
@@ -152,7 +152,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-500 text-white p-10 rounded-3xl shadow-2xl relative overflow-hidden">
+            <div className="bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-500 text-white p-6 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden">
               {/* Decorative Elements */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>

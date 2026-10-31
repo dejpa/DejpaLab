@@ -45,7 +45,7 @@ export default function Navigation() {
     if (target) {
       setIsSearchOpen(false);
       setIsOpen(false);
-      window.location.href = target.href;
+      window.location.href = `/${locale}${target.href}`;
     }
   };
 
@@ -92,7 +92,7 @@ export default function Navigation() {
           }
         }
       `}} />
-      <header className="header header-nav fixed top-0 left-0 right-0 w-full z-50 backdrop-blur-xl bg-primary-600/80 border-b border-white/20 shadow-lg shadow-primary-900/10 overflow-hidden">
+      <header className="header header-nav fixed top-0 left-0 right-0 w-full z-50 backdrop-blur-xl bg-primary-600/80 border-b border-white/20 shadow-lg shadow-primary-900/10">
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex items-center justify-between h-16 relative">
           {/* Left Section: Logo Box */}
@@ -121,14 +121,14 @@ export default function Navigation() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="xl:hidden p-2.5 rounded-xl text-white hover:bg-white/20 active:scale-95 transition-all duration-200 mr-4 rtl:mr-0 rtl:ml-4 z-50 relative"
-              aria-label="Menu"
+              aria-label={isOpen ? (isRTL ? 'بستن منو' : 'Close menu') : (isRTL ? 'بازکردن منو' : 'Open menu')}
               aria-expanded={isOpen}
             >
-              <div className="w-6 h-5 flex flex-col justify-between">
-                <span className={`block h-0.5 w-full bg-white transition-all duration-300 ease-out ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-                <span className={`block h-0.5 w-full bg-white transition-all duration-300 ease-out ${isOpen ? 'opacity-0' : ''}`}></span>
-                <span className={`block h-0.5 w-full bg-white transition-all duration-300 ease-out ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
-              </div>
+              {isOpen ? (
+                <X className="h-6 w-6" strokeWidth={2} aria-hidden="true" />
+              ) : (
+                <Menu className="h-6 w-6" strokeWidth={2} aria-hidden="true" />
+              )}
             </button>
 
             {/* Desktop Logo */}
@@ -168,7 +168,7 @@ export default function Navigation() {
             </Link>
 
             {/* Mobile Search Button */}
-            <button className="xl:hidden p-2.5 rounded-xl text-white hover:bg-white/20 active:scale-95 transition-all duration-200 mr-2 rtl:mr-0 rtl:ml-2">
+            <button onClick={() => setIsSearchOpen(prev => !prev)} aria-label={isRTL ? 'جست‌وجو' : 'Search'} className="xl:hidden p-2.5 rounded-xl text-white hover:bg-white/20 active:scale-95 transition-all duration-200 mr-2 rtl:mr-0 rtl:ml-2">
               <Search className="w-5 h-5" />
             </button>
 
@@ -279,12 +279,12 @@ export default function Navigation() {
 
         {/* Mobile Menu Dropdown */}
         <div
-          className={`xl:hidden mobile-menu-container overflow-hidden transition-all duration-300 ease-out ${
-            isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          className={`xl:hidden mobile-menu-container absolute inset-x-0 top-full overflow-hidden transition-all duration-300 ease-out ${
+            isOpen ? 'max-h-[calc(100dvh-4rem)] opacity-100' : 'max-h-0 opacity-0'
           }`}
           style={{ zIndex: 40 }}
         >
-          <div className="pb-4 bg-primary-600/95 backdrop-blur-xl border-t border-white/20 overflow-y-auto max-h-[calc(100vh-4rem)]">
+          <div className="pb-4 border-t border-white/20 overflow-y-auto max-h-[calc(100dvh-4rem)]">
             {navItems.map((item, index) => (
               <Link
                 key={item.href}

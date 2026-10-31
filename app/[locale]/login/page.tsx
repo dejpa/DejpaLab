@@ -32,10 +32,10 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="py-24 bg-gradient-to-b from-gray-50 to-white min-h-screen flex items-center">
+    <div className="site-canvas py-14 md:py-20 min-h-screen flex items-center">
       <div className="container mx-auto px-4">
         <div className="max-w-md mx-auto">
-          <div className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100">
+          <div className="surface-glass bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-gray-100">
             <div className="text-center mb-8">
               <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
                 {t('title')}
