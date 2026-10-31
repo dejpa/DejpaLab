@@ -18,8 +18,8 @@ export default function Footer() {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary-500 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
       </div>
       
-      <div className="container mx-auto px-4 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      <div className="container mx-auto px-4 pt-16 pb-4 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-6">
           {/* About */}
           <div className="space-y-4">
             <Link href="/" className="inline-block group">
@@ -90,21 +90,21 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-12 pt-8 text-center">
-          <p className="text-gray-300 text-sm">
-            © {new Date().getFullYear()} DejpaLab. {t('rights')}
+        <div className="flex flex-col items-center gap-1 border-t border-white/10 pt-4 text-center text-xs leading-5 text-gray-300 sm:flex-row sm:justify-between sm:gap-4">
+          <p>
+            <span dir="ltr" className="inline-block">© {new Date().getFullYear()} DejpaLab.</span>{' '}{t('rights')}
           </p>
-             <p className="text-gray-500 text-xs mt-1">
-                Design & Development by{" "}
-                <a 
-                    href="https://www.melinaniavarani.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-primary-400 transition-colors duration-300 hover-cursor-glow"
-                >
-                    Melina Niavarani
-                </a>
-              </p>
+          <p dir="ltr">
+            Design &amp; Development by{' '}
+            <a
+              href="https://www.melinaniavarani.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-gray-200 underline-offset-4 transition-colors hover:text-white hover:underline"
+            >
+              Melina Niavarani
+            </a>
+          </p>
         </div>
       </div>
     </footer>
